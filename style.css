@@ -4,6 +4,21 @@
 
 .calc-container {
     background-color: antiquewhite;
+    flex-direction: column;
+    display:flex;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.op-container {
+    background-color: azure;
+    display:flex;
+    flex-direction: column;
+    max-width:100px;
 }
 
 .numpad-container {

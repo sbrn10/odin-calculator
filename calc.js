@@ -3,23 +3,50 @@ const topContainer = document.querySelector(".top-container");
 function createCalculator() {
     const calcContainer = document.createElement("div");
 
-    // create number pad
-    const numPadContainer = document.createElement("div");
-    numPadContainer.classList.add("numpad-container");
+    //create buttons
+    const buttonsContainer = document.createElement("div");
+    buttonsContainer.classList.add("buttons-container");
 
-    for (i = 0; i < 10; i++) {
-        let button = document.createElement("button");
-        button.classList.add("numpad")
-        button.textContent = i;
+        // create number pad
+        const numPadContainer = document.createElement("div");
+        numPadContainer.classList.add("numpad-container");
 
-        if (i==0) {
-            button.style.flexBasis = "100%";
+        for (i = 0; i < 11; i++) {
+            let button = document.createElement("button");
+            button.classList.add("numpad")
+            button.textContent = i;
+
+            if (i==10) {
+                button.textContent = ".";
+                button.style.order = "-1";
+                button.style.flexBasis = "50%";
+            }
+            if (i==0) {
+                button.style.order = "-1";
+                button.style.flexBasis = "50%";
+            }
+
+            numPadContainer.appendChild(button);
         }
 
-        numPadContainer.appendChild(button);
-    }
+        buttonsContainer.appendChild(numPadContainer);
 
-    calcContainer.appendChild(numPadContainer);
+        // add operators
+        const opContainer = document.createElement("div");
+        opContainer.classList.add("op-container");
+        const operators = "+-*/";
+
+        for (let i = 0; i < operators.length; i++) {
+            let button = document.createElement("button");
+            button.classList.add("numpad")
+            button.textContent = operators[i];
+            opContainer.appendChild(button);
+        }
+
+        buttonsContainer.appendChild(opContainer);
+    topContainer.appendChild(buttonsContainer);
+
+    // display calculator within top-container
     topContainer.appendChild(calcContainer);
 
 }
