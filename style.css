@@ -1,0 +1,19 @@
+.top-container {
+    background-color: aqua;
+}
+
+.calc-container {
+    background-color: antiquewhite;
+}
+
+.numpad-container {
+    display:flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    max-width: 300px;
+}
+
+button.numpad {
+    min-width: 100px;
+    min-height: 100px;
+}
