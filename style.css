@@ -45,7 +45,8 @@ button {
 
 button.numpad {
     min-width: 100px;
-    min-height: 100px;
+    min-height: 80px;
+    
 }
 
 .op-container button.numpad {

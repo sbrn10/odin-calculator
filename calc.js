@@ -23,6 +23,8 @@ function createCalculator() {
         for (i = 0; i < 11; i++) {
             let button = document.createElement("button");
             button.classList.add("numpad")
+
+            // populate textContent
             button.textContent = i;
 
             if (i==10) {
@@ -35,6 +37,12 @@ function createCalculator() {
                 button.style.flexBasis = "50%";
             }
 
+            // add event listeners PLACEHOLDER
+            button.addEventListener("click", e => {
+                console.log(e.target.textContent);
+            })
+
+            // add buttons to parent container
             numPadContainer.appendChild(button);
         }
 
@@ -43,12 +51,19 @@ function createCalculator() {
         // create operators
         const opContainer = document.createElement("div");
         opContainer.classList.add("op-container");
-        const operators = "+-*/";
+        const operators = "+-*/=";
 
         for (let i = 0; i < operators.length; i++) {
             let button = document.createElement("button");
             button.classList.add("numpad")
             button.textContent = operators[i];
+
+            // add event listeners PLACEHOLDER
+            button.addEventListener("click", e => {
+                console.log(e.target.textContent);
+            })
+
+            // add buttons to parent container
             opContainer.appendChild(button);
         }
 
@@ -59,5 +74,10 @@ function createCalculator() {
     topContainer.appendChild(calcContainer);
 
 }
+
+
+
+
+
 
 createCalculator();
