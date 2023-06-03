@@ -2,6 +2,15 @@ const topContainer = document.querySelector(".top-container");
 
 function createCalculator() {
     const calcContainer = document.createElement("div");
+    calcContainer.classList.add("calc-container");
+
+    //create display
+    const displayContainer = document.createElement("div");
+    displayContainer.classList.add("display-container");
+    displayContainer.textContent = "1245689"; // placeholder text
+
+    calcContainer.appendChild(displayContainer);
+
 
     //create buttons
     const buttonsContainer = document.createElement("div");
@@ -31,7 +40,7 @@ function createCalculator() {
 
         buttonsContainer.appendChild(numPadContainer);
 
-        // add operators
+        // create operators
         const opContainer = document.createElement("div");
         opContainer.classList.add("op-container");
         const operators = "+-*/";
@@ -44,7 +53,7 @@ function createCalculator() {
         }
 
         buttonsContainer.appendChild(opContainer);
-    topContainer.appendChild(buttonsContainer);
+    calcContainer.appendChild(buttonsContainer);
 
     // display calculator within top-container
     topContainer.appendChild(calcContainer);

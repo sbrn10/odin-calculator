@@ -1,11 +1,26 @@
+button {
+    font-size:24px;
+    font-weight:bold;
+}
+
 .top-container {
-    background-color: aqua;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
 }
 
 .calc-container {
-    background-color: antiquewhite;
-    flex-direction: column;
     display:flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.display-container {
+    display:flex;
+    background-color: aqua;
+    font-size: 36px;
+    font-weight: bold;
+    justify-content: center;
 }
 
 .buttons-container {
@@ -31,4 +46,9 @@
 button.numpad {
     min-width: 100px;
     min-height: 100px;
+}
+
+.op-container button.numpad {
+    color:blueviolet;
+    
 }
